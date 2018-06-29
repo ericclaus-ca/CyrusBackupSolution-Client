@@ -1,0 +1,60 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180503193001
+Username: AD\RobertLee
+RunAs User: AD\RobertLee
+Configuration Name: 
+Machine: SPICEWORKS1 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE C:\Scripts\Cyrus-Backup-Client\Backup-FirewallConfig.ps1
+Process ID: 7756
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Scripts\Cyrus-Backup-Client\Backup-FirewallConfig.ps1.transcript
+
+
+    Directory: \\nas1\d$\NASShare\dr\fortinet\Fortigate Config
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        3/13/2018   7:30 PM                Automated-Backups
+Starting TFTP server...
+Enabling TFTP firewall rule...
+
+Updated 1 rule(s).
+Ok.
+Backing up: 172.17.5.2...
+
+
+    Directory: \\nas1\d$\NASShare\dr\fortinet\Fortigate Config\Automated-Backups\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         5/2/2018   7:30 PM                2
+
+Output     : {FGT1KC3914802826 # Please wait..., Connect to tftp server 172.17.5.96 ..., #, Send
+             config file to tftp server OK....}
+ExitStatus : 0
+Error      :
+Host       : 172.17.5.2
+Duration   : 00:00:00.5789662
+
+True
+Backup of 172.17.5.2 is complete.
+Stopping TFTP server...
+Disabling TFTP firewall rule...
+
+Updated 1 rule(s).
+Ok.
+**********************
+Windows PowerShell transcript end
+End time: 20180503193005
+**********************
