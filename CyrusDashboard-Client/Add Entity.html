@@ -1,0 +1,226 @@
+<head>
+    <title>Add Entity</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="side-bar">
+      <ul>
+          <li>
+              <a href="index.html" id="menu_home" title="Home">
+                  Home
+              </a>
+          </li>
+          <li>
+              <a href="View Inventory.html" id="menu_inventory" title="View Inventory">
+                  View Inventory
+              </a>
+          </li>
+          <li>
+              <a href="Add Entity.html" id="menu_add" title="Add Entity">
+                  Switch Maps
+              </a>
+          </li>
+          <li>
+              <a href="Switch Maps.html" id="menu_switch" title="Switch Maps">
+                  Add Entity
+              </a>
+          </li>
+          <li>
+              <a href="Support.html" id="menu_support" title="Support">
+                  Support
+              </a>
+          </li>
+      </ul>
+    </div>
+
+    <div class="page-header">
+        <h1>Add Entities to the Database</h1>
+    </div>
+
+<form action="/All_Device_Data/Create" method="post"><input name="__RequestVerificationToken" type="hidden" value="733GM4LczTFBd5AjujHEpABMa2wfIEP0inZLNLBdHdffsyUl5EX5O7idwOgHahFQcRPwSWLlencYG7uhptPW1ktl30T7YK7tevMvXS_rFYk1" />        <div class="page-content">
+            <div class="add-form-inputs">
+                <div class="sub-content" id="add-form-1">
+                    <p>General information:</p>
+
+
+
+                    <label class="control-label col-md-2" for="asset_id">asset_id</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field asset_id must be a number." data-val-required="The asset_id field is required." id="asset_id" name="asset_id" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="asset_id" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="description">description</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="description" name="description" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="description" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="device_type">device_type</label>
+                    <div class="col-md-10">
+                        <select id="device_type" name="device_type"><option value="">Select Type</option>
+                          <option value="Computer">Computer</option>
+                          <option value="Mobile">Mobile</option>
+                          <option value="Network">Network</option>
+                          <option value="Other">Other</option>
+                          <option value="Phone">Phone</option>
+                          <option value="Printer">Printer</option>
+                          <option value="Projection">Projection</option>
+                          <option value="Server">Server</option>
+                        </select>
+
+
+                        <span class="field-validation-valid text-danger" data-valmsg-for="device_type" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="device_subtype">device_subtype</label>
+                    <div class="col-md-10">
+                        <select id="device_subtype" name="device_subtype"><option value="">Select Sub-Type</option>
+                          <option value="Desktop">Desktop</option>
+                          <option value="Laptop">Laptop</option>
+                          <option value="Tablet">Tablet</option>
+                          <option value="AP">AP</option>
+                          <option value="Firewall">Firewall</option>
+                          <option value="Switch">Switch</option>
+                          <option value="Other">Other</option>
+                          <option value="Cell">Cell</option>
+                          <option value="VOIP">VOIP</option>
+                          <option value="B&W">B&W</option>
+                          <option value="Color">Color</option>
+                          <option value="MFP">MFP</option>
+                          <option value="DVD/VHS">DVD/VHS</option>
+                          <option value="Projector">Projector</option>
+                          <option value="App">App</option>
+                          <option value="DC">DC</option>
+                          <option value="Hypervisor">Hypervisor</option>
+                          <option value="Services">Services</option>
+                        </select>
+
+                        <span class="field-validation-valid text-danger" data-valmsg-for="device_subtype" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="manufacturer">manufacturer</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="manufacturer" name="manufacturer" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="manufacturer" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="model">model</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="model" name="model" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="model" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="serial_number">serial_number</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="serial_number" name="serial_number" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="serial_number" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="status">status</label>
+                    <div class="col-md-10">
+                        <select id="status" name="status"><option value="">Select Status</option>
+                          <option value="Active">Active</option>
+                          <option value="Available">Available</option>
+                          <option value="Retired">Retired</option>
+                          <option value="Parts">Parts</option>
+                        </select>
+
+                        <span class="field-validation-valid text-danger" data-valmsg-for="status" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="sub-content" id="add-form-2">
+                    <p>Location and network information:</p>
+
+                    <label class="control-label col-md-2" for="building">building</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="building" name="building" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="building" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="room">room</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="room" name="room" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="room" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="host_name">host_name</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="host_name" name="host_name" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="host_name" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="mac_address">mac_address</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="mac_address" name="mac_address" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="mac_address" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="static_ip">static_ip</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="static_ip" name="static_ip" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="static_ip" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="switch_name">switch_name</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="switch_name" name="switch_name" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="switch_name" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="switch_port">switch_port</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="switch_port" name="switch_port" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="switch_port" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="vlan_id">vlan_id</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field vlan_id must be a number." id="vlan_id" name="vlan_id" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="vlan_id" data-valmsg-replace="true"></span>
+                    </div>
+
+                </div>
+                <div class="sub-content" id="add-form-3">
+                    <p>OS and hardware specs:</p>
+
+                    <label class="control-label col-md-2" for="os_version">os_version</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="os_version" name="os_version" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="os_version" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="cpu">cpu</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="cpu" name="cpu" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="cpu" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="ram">ram</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="ram" name="ram" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="ram" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <label class="control-label col-md-2" for="hdd">hdd</label>
+                    <div class="col-md-10">
+                        <input class="form-control text-box single-line" id="hdd" name="hdd" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="hdd" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add-form-submit" id="add-form-6">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+</form>
+    <div class="footer">
+        <img src="./images/logo.png" width="180px"/><br />
+        Design by <a href="https://www.linkedin.com/in/ericclaus/">Eric Claus</a>
+    </div>
+</body>

@@ -1,0 +1,47 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180718000001
+Username: AD\CyrusClient
+RunAs User: AD\CyrusClient
+Machine: CYRUSCLIENT1 (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE C:\Scripts\Cyrus-Backup-Client\Cyrus-Backup-Client.ps1
+Process ID: 4552
+PSVersion: 5.1.14393.2339
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.2339
+BuildVersion: 10.0.14393.2339
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Scripts\Cyrus-Backup-Client\transcripts\Cyrus-Backup-Client.ps1.07-18-2018_00-00.transcript
+Starting TFTP server...
+Enabling TFTP firewall rule...
+
+Updated 1 rule(s).
+Ok.
+Backing up switch: 172.17.0.1...
+True
+Backup of 172.17.0.1 is complete.
+Backing up switch: 172.17.0.3...
+True
+Backup of 172.17.0.3 is complete.
+Backing up switch: 172.17.0.4...
+True
+Backup of 172.17.0.4 is complete.
+Backing up switch: 172.17.0.5...
+True
+Backup of 172.17.0.5 is complete.
+Backing up switch: 172.17.0.6...
+True
+Backup of 172.17.0.6 is complete.
+Stopping TFTP server...
+Disabling TFTP firewall rule...
+
+Updated 1 rule(s).
+Ok.
+**********************
+Windows PowerShell transcript end
+End time: 20180718000127
+**********************

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WSUS Backup History</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Sorting Javascript script from: https://www.kryogenix.org/code/browser/sorttable/ -->
+    <script src="./Scripts/sorttable.js"></script>
+    <!--JS from https://stackoverflow.com/a/42333464 -->
+    <script src="./Scripts/jquery-1.10.2.js"></script>
+</head><body>
+  <!--Nav bar (code modified from https://stackoverflow.com/a/42333464)-->
+  <div id="nav-placeholder"></div>
+  <script>$(function(){$("#nav-placeholder").load("./page_elements/nav-bar.html");});</script>
+  <!--end of Navigation bar-->
+
+  <div class="page-header">
+      <h1>WSUS Backup History</h1>
+  </div>
+  <div class="page-content">
+  <div class="table-container">
+
+<table>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tr><th>Name</th><th>CreationTime</th><th>LastModified</th><th>Size</th></tr>
+<tr><td>V:\VM_Backup\WSUS\WSUSD2018-07-22T214842.vbk</td><td>7/22/2018 9:49:05 PM</td><td>7/22/2018 10:43:21 PM</td><td>82.65 GB</td></tr>
+<tr><td>V:\VM_Backup\WSUS\WSUSD2018-07-01T214825.vbk</td><td>7/1/2018 9:48:48 PM</td><td>7/1/2018 10:18:14 PM</td><td>42.89 GB</td></tr>
+<tr><td>V:\VM_Backup\WSUS\WSUSD2018-06-24T214917.vbk</td><td>6/24/2018 9:49:40 PM</td><td>6/24/2018 10:19:22 PM</td><td>43.07 GB</td></tr>
+</table>
+</div>
+</div>
+
+  <!--Footer (code modified from https://stackoverflow.com/a/42333464)-->
+  <div id="foot-placeholder"></div>
+  <script>$(function(){$("#foot-placeholder").load("./page_elements/foot.html");});</script>
+  <!--end of Footer-->
+</body></html>

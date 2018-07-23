@@ -50,13 +50,13 @@ if ($dayOfWeek -eq "Sunday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
@@ -68,13 +68,13 @@ if ($dayOfWeek -eq "Monday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
@@ -86,13 +86,13 @@ if ($dayOfWeek -eq "Tuesday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
@@ -104,13 +104,13 @@ if ($dayOfWeek -eq "Wednesday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
@@ -122,13 +122,13 @@ if ($dayOfWeek -eq "Thursday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
@@ -140,13 +140,13 @@ if ($dayOfWeek -eq "Friday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
@@ -158,20 +158,20 @@ if ($dayOfWeek -eq "Saturday") {
         Backup-SwitchConfig
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 0) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
         Backup-Dokuwiki
         Backup-Spiceworks
         Backup-Xibo
     }
 
-    if ($hourOfDay -eq 19 -and $minuteOfHour -eq 30) {
+    if ($hourOfDay -eq 19 -and $minuteOfHour -ge 30) {
         Backup-FirewallConfig
         Backup-GPOs
         Backup-Centaur
     }
 }
 
-if ($dayOfMonth -eq 1 -and $hourOfDay -eq 4 -and $minuteOfHour -eq 0) {
+if ($dayOfMonth -eq 1 -and $hourOfDay -eq 4 -and $minuteOfHour -lt 30) {
     Backup-EOP
 }
 
