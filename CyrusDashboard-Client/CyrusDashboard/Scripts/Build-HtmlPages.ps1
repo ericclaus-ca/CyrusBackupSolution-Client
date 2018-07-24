@@ -42,11 +42,14 @@ Remove-PSDrive -Name "tempSource" -ErrorAction SilentlyContinue
 New-PSDrive -Name "tempSource" -PSProvider FileSystem -Root $nasDr -Credential $creds
 $nasDr = "tempSource:\"
 
+# Backup directory for the network switches
+$switchDr = "$nasDr\switches\Automated-Backups"
+
 # A list of items to display backup history for (most of the items backed up by Cyrus Backup Solution)
 $BackupDirs = 
     @(
         #@("Backup directory path","File name for the HTML file","HTML page title")
-        @("$nasDr\fortinet\Fortigate Config\Automated-Backups\2\","History_Fortigate Config","Fortigate Config Backup History"),
+        @("$nasDr\fortinet\Fortigate Config\Automated-Backups\2\","History_Network-Fortigate Config","Fortigate Config Backup History"),
         @("$nasDr\fortinet\FSSO Config\","History_FSSO Config","FSSO Config Backup History"),
         @("$nasDr\fortinet\FortiClient EMS DB\","History_EMS","EMS DB Backup History"),
         @("$nasDr\EveryonePrint","History_EveryonePrint","EveryonePrint Backup History"),
@@ -71,7 +74,13 @@ $BackupDirs =
         @("$vmDr\spiceworks1","History_VM-Spiceworks1","Spiceworks1 Backup History"),
         @("$vmDr\Sync1","History_VM-Sync1","Sync1 Backup History"),
         @("$vmDr\WSUS","History_VM-WSUS","WSUS Backup History"),
-        @("Z:\Cyrus\NASShare","History_NASShare","NAS1 Backup History")
+        @("Z:\Cyrus\NASShare","History_Network-NASShare","NAS1 Backup History","7z"),
+        @("$nasDr\GPO\Logs","History_GPO","GPO Backup History"),
+        @("$switchDr\172.17.0.1","History_Network-Core Switch","Core Switch Backup History","cfg"),
+        @("$switchDr\172.17.0.3","History_Network-Business Office Switch","Business Office Switch Backup History","cfg"),
+        @("$switchDr\172.17.0.4","History_Network-Gym Switch","Gym Switch Backup History","cfg"),
+        @("$switchDr\172.17.0.5","History_Network-Band Switch","Band Switch Backup History","cfg"),
+        @("$switchDr\172.17.0.6","History_Network-Help Desk Switch","Help Desk Switch Backup History","cfg")
     )
 
 foreach ($dir in $BackupDirs) {
@@ -80,7 +89,11 @@ foreach ($dir in $BackupDirs) {
     $fileName = $dir[1]
     if ($fileName -notlike "*.html") {$fileName = "$fileName.html"}
 
-    Show-BackupStatusHistory -BackupDir $dir[0] | 
+    # If a file type is specified in the array above, if not show files of all types
+    if ($dir[3]) {$fileExtension = $dir[3]}
+    else {$fileExtension = "*"}
+
+    Show-BackupStatusHistory -BackupDir $dir[0] -FileExtensionWithoutPeriod $fileExtension | 
         ConvertTo-Html -Head $Head -PreContent $PreContent -PostContent $PostContent | 
         Out-File -Encoding ascii "C:\Scripts\Cyrus-Backup-Server\CyrusDashboard\$fileName"
 }

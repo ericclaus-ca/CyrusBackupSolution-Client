@@ -175,4 +175,6 @@ if ($dayOfMonth -eq 1 -and $hourOfDay -eq 4 -and $minuteOfHour -lt 30) {
     Backup-EOP
 }
 
+. "$PSScriptRoot\Build-Dashboard.ps1"
+
 Stop-Transcript

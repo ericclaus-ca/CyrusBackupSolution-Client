@@ -1,5 +1,6 @@
 . "$PSSCriptRoot\Get-SecurePassword.ps1"
 
+# Run the Build-HtmlPages script, generating the website
 . "$PSScriptRoot\Build-HtmlPages.ps1"
 
 # Create a PSCredential object with the password for the domain backup VLAN admin account
@@ -16,4 +17,4 @@ New-PSDrive -Name "tempSource1" -PSProvider FileSystem -Root $backupSource -Cred
 $source = "tempSource1:\"
 
 
-Copy-Item "C:\Scripts\Cyrus-Backup-Server\CyrusDashboard" -Recurse -Destination "$source\CyrusDashboard"
+Copy-Item "C:\Scripts\Cyrus-Backup-Server\CyrusDashboard" -Recurse -Destination "$source\CyrusDashboard" -Force
