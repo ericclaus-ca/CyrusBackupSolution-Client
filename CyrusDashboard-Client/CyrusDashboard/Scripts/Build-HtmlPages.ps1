@@ -62,6 +62,7 @@ $BackupDirs =
         @("$nasDr\FruitServer","History_Fruit Server","FruitServer Backup History"),
         @("$nasDr\Xibo","History_Xibo","Xibo Backup History"),
         @("$vmDr\AD3","History_VM-AD3","AD3 Backup History"),
+        @("$vmDr\AD3-Daily","History_VM-AD3 Daily","AD3-Daily Backup History"),
         @("$vmDr\Centurion1","History_VM-Centurion1","Centurion1 Backup History"),
         @("$vmDr\CyrusClient1","History_VM-CyrusClient1","CyrusClient1 Backup History"),
         @("$vmDr\Dokuwiki1","History_VM-Dokuwiki1","Dokuwiki1 Backup History"),

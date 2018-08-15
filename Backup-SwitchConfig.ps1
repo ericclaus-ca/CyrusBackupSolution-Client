@@ -75,7 +75,7 @@ function Backup-SwitchConfig {
         $Body = "There has been an error with the automatic backup of the switches's configurations. See the attached log file for details. -- $_"
         $SMTPServer = "aspmx.l.google.com"
         $SMTPPort = "25"
-        Send-MailMessage -From $From -to $To -Subject $Subject -Body $Body -SmtpServer $SMTPServer -port $SMTPPort -UseSsl
+        #Send-MailMessage -From $From -to $To -Subject $Subject -Body $Body -SmtpServer $SMTPServer -port $SMTPPort -UseSsl
     }
     # If any terminating error occurs, invoke the ErrorHandler function and stop the script
     trap {ErrorHandler; Exit 1}
@@ -83,7 +83,7 @@ function Backup-SwitchConfig {
     $ErrorActionPreference = "Stop"
 
     ########## End Error Handling ##########
-
+    
     # Username of the admin account on the switches, and the secure password file with it's password
     $userName = "admin"
     $pwdFile = "$PSScriptRoot\Other\1130909413"
@@ -106,14 +106,15 @@ function Backup-SwitchConfig {
 
         # Send a space to get past the "Press any key to continue" screen (could be any key)
         $shellStream.WriteLine(" ")
+        Sleep 5
 
         # First, save the current running config and pause to give it time
         $shellStream.WriteLine("write mem")
-        Sleep 5
+        Sleep 10
 
         # Then, send the backup command to the switch
-        $shellStream.WriteLine($backupCommand)
-        Sleep 10
+        $shellStream.WriteLine($backupCommand) 
+        Sleep 20
 
         # Finally, logout of the switch and confirm the logout
         $shellStream.WriteLine("logout")
@@ -188,13 +189,13 @@ function Backup-SwitchConfig {
             Move-Item "$tftpRoot\$fileName" $switchBackupDir
             echo "Switch $switch backed up on $today." | Out-File -Append $log
             # Write the switch's config changes (the results of Compare-Files) to the change log
-            echo $compareResults | Out-File -Append $switchChangeLog
+            echo $compareResults | Tee-Object -filepath $log #Out-File -Append $switchChangeLog
         }
         # If there has not been a change to the config
         Else {
             # Delete the newly created config backup file
             Remove-Item "$tftpRoot\$fileName"
-            echo "Switch $switch has not been backed up. No change has been detected." | Out-File -Append $log
+            echo "Switch $switch has not been backed up. No change has been detected." | Tee-Object -filepath $log #Out-File -Append $log
         }
 
         echo "Backup of $switch is complete."

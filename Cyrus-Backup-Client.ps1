@@ -23,7 +23,7 @@ $dateTime = (Get-Date).ToString("MM-dd-yyyy_HH-mm")
 $scriptName = $MyInvocation.MyCommand.Name
 $transcript = "$PSScriptRoot\transcripts\$scriptName.$dateTime.transcript"
 Start-Transcript -Path $transcript
-  
+ 
 # Include the neccasary functions
 $myFunctions = @(
     "$PSScriptRoot\Backup-Centaur.ps1",
@@ -175,6 +175,6 @@ if ($dayOfMonth -eq 1 -and $hourOfDay -eq 4 -and $minuteOfHour -lt 30) {
     Backup-EOP
 }
 
-. "$PSScriptRoot\Build-Dashboard.ps1"
+. "$PSScriptRoot\Copy-Dashboard.ps1"
 
 Stop-Transcript
