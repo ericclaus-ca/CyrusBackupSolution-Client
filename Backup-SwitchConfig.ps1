@@ -75,7 +75,7 @@ function Backup-SwitchConfig {
         $Body = "There has been an error with the automatic backup of the switches's configurations. See the attached log file for details. -- $_"
         $SMTPServer = "aspmx.l.google.com"
         $SMTPPort = "25"
-        #Send-MailMessage -From $From -to $To -Subject $Subject -Body $Body -SmtpServer $SMTPServer -port $SMTPPort -UseSsl
+        Send-MailMessage -From $From -to $To -Subject $Subject -Body $Body -SmtpServer $SMTPServer -port $SMTPPort -UseSsl
     }
     # If any terminating error occurs, invoke the ErrorHandler function and stop the script
     trap {ErrorHandler; Exit 1}
@@ -139,8 +139,8 @@ function Backup-SwitchConfig {
         [ipaddress]"172.17.0.1",
         [ipaddress]"172.17.0.3",
         [ipaddress]"172.17.0.4",
-        [ipaddress]"172.17.0.5",
-        [ipaddress]"172.17.0.6"
+        [ipaddress]"172.17.0.5"#,
+        #[ipaddress]"172.17.0.6"
         )   
    
     # IP of the TFTP server (generally your local IP)
