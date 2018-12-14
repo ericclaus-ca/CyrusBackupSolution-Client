@@ -14,7 +14,7 @@ Requirements:
       secure password and the username (this must be done on the same computer and by the same user 
       account which will be running this backup script).
   * A secure password file containing the password for the zip file encryption for the SQL backup.
-  * The 7Zip4PowerShell module must be installed.
+  * The 7Zip4PowerShell module must be installed on the Sync server where the application site resides.
 
 .NOTES
     Author: Eric Claus, IT Assistant, Collegedale Academy, ericclaus@collegedaleacademy.com
