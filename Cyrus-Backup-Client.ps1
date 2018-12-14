@@ -33,6 +33,7 @@ $myFunctions = @(
     "$PSScriptRoot\Backup-SwitchConfig.ps1",
     "$PSScriptRoot\Backup-Dokuwiki.ps1",
     "$PSScriptRoot\Backup-Spiceworks.ps1",
+    "$PSScriptRoot\Backup-StudentApplicationDB.ps1",
     "$PSScriptRoot\Backup-Xibo.ps1"
     )
 $myFunctions | ForEach-Object {
@@ -48,6 +49,7 @@ $minuteOfHour = (Get-Date).Minute
 if ($dayOfWeek -eq "Sunday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
@@ -66,6 +68,7 @@ if ($dayOfWeek -eq "Sunday") {
 if ($dayOfWeek -eq "Monday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
@@ -84,6 +87,7 @@ if ($dayOfWeek -eq "Monday") {
 if ($dayOfWeek -eq "Tuesday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
@@ -102,6 +106,7 @@ if ($dayOfWeek -eq "Tuesday") {
 if ($dayOfWeek -eq "Wednesday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
@@ -120,6 +125,7 @@ if ($dayOfWeek -eq "Wednesday") {
 if ($dayOfWeek -eq "Thursday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
@@ -138,6 +144,7 @@ if ($dayOfWeek -eq "Thursday") {
 if ($dayOfWeek -eq "Friday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
@@ -156,6 +163,7 @@ if ($dayOfWeek -eq "Friday") {
 if ($dayOfWeek -eq "Saturday") {
     if ($minuteOfHour -eq 0) {
         Backup-SwitchConfig
+        Backup-StudentApplicationDB
     }
 
     if ($hourOfDay -eq 19 -and $minuteOfHour -lt 30) {
