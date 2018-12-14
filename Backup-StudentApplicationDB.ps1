@@ -47,7 +47,7 @@ function Backup-StudentApplicationSiteDB {
         # Send an email to Spiceworks, creating a ticket, if there are any errors.
         # Thanks to https://www.pdq.com/blog/powershell-send-mailmessage-gmail/ for the code below. 
         $From = "fortigate-log@collegedaleacademy.com"
-        $To = "ericclaus@collegedaleacademy.com"
+        $To = "help@collegedaleacademy.com"
         $Subject = "Student Application Site DB Backup Error"
         $Body = "There has been an error with the automatic backup of the Student Application Site's DB. See the attached log file for details. -- $_"
         $SMTPServer = "aspmx.l.google.com"
@@ -80,7 +80,7 @@ function Backup-StudentApplicationSiteDB {
     ########## End Credential Management ##########
 
     # The target backup directory
-    $backupDir = "\\nas1\d$\NASShare\dr\Student Application Site\DB\ca_applications"
+    $backupDir = "\\nas1\d$\NASShare\dr\Student Application Site\DB"
     New-Item $backupDir -ItemType Directory -Force | Out-Null
 
     # MySQL bin directory where mysqldump.exe is located and is to be ran from
